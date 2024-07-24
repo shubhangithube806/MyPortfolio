@@ -189,11 +189,16 @@
     <Compile Include="Migrations\202407231044531_CreateBasicInfoTable.designer.cs">
       <DependentUpon>202407231044531_CreateBasicInfoTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202407240719516_AddPortfolioUserTable.cs" />
+    <Compile Include="Migrations\202407240719516_AddPortfolioUserTable.designer.cs">
+      <DependentUpon>202407240719516_AddPortfolioUserTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationDbInitializer.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\BasicInfo.cs" />
+    <Compile Include="Models\PortfolioUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
@@ -361,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202407231044531_CreateBasicInfoTable.resx">
       <DependentUpon>202407231044531_CreateBasicInfoTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407240719516_AddPortfolioUserTable.resx">
+      <DependentUpon>202407240719516_AddPortfolioUserTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
