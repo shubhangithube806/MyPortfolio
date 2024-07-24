@@ -193,6 +193,10 @@
     <Compile Include="Migrations\202407240719516_AddPortfolioUserTable.designer.cs">
       <DependentUpon>202407240719516_AddPortfolioUserTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202407240826445_RemovePluralizingTableName.cs" />
+    <Compile Include="Migrations\202407240826445_RemovePluralizingTableName.designer.cs">
+      <DependentUpon>202407240826445_RemovePluralizingTableName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationDbInitializer.cs" />
@@ -369,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202407240719516_AddPortfolioUserTable.resx">
       <DependentUpon>202407240719516_AddPortfolioUserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407240826445_RemovePluralizingTableName.resx">
+      <DependentUpon>202407240826445_RemovePluralizingTableName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
