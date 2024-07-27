@@ -203,6 +203,10 @@
     <Compile Include="Migrations\202407271044032_AddProfileColumnAndMakeDateNullableInBasicInfoTable.designer.cs">
       <DependentUpon>202407271044032_AddProfileColumnAndMakeDateNullableInBasicInfoTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202407271101526_AddDataAnnotationsToBasicInfo..cs" />
+    <Compile Include="Migrations\202407271101526_AddDataAnnotationsToBasicInfo..designer.cs">
+      <DependentUpon>202407271101526_AddDataAnnotationsToBasicInfo..cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationDbInitializer.cs" />
@@ -387,6 +391,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202407271044032_AddProfileColumnAndMakeDateNullableInBasicInfoTable.resx">
       <DependentUpon>202407271044032_AddProfileColumnAndMakeDateNullableInBasicInfoTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407271101526_AddDataAnnotationsToBasicInfo..resx">
+      <DependentUpon>202407271101526_AddDataAnnotationsToBasicInfo..cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
