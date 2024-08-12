@@ -21,17 +21,18 @@
         </thead>
 
         <tbody>
+
             <tr>
                 <td class="text-left">Basic Details</td>
                 <td>
                     @if (Model.BasicInfoId == Guid.Empty)
                     {
-                        @Html.ActionLink("Add", "SaveBasicInfo", "MyBasicInfo", null, new {@class= "btn btn-primary pl-4 pr-4" })
+                        @Html.ActionLink("Add", "SaveBasicInfo", "MyBasicInfo", null, new { @class = "btn btn-primary pl-4 pr-4" })
                     }
 
                     else
                     {
-                        @Html.ActionLink("Edit", "SaveBasicInfo", "MyBasicInfo", new {basicInfoId = Model.BasicInfoId}, new {@class = "btn btn-warning pl-4 pr-4"})
+                        @Html.ActionLink("Edit", "SaveBasicInfo", "MyBasicInfo", new { basicInfoId = Model.BasicInfoId }, new { @class = "btn btn-warning pl-4 pr-4" })
                     }
                 </td>
 
@@ -49,46 +50,34 @@
             </tr>
 
 
-            @*<tr>
+            <tr>
                 <td class="text-left">Education</td>
                 <td>
-                    <button type="button" class="btn btn-primary pl-4 pr-4">Add</button>
-                    <button type="button" class="btn btn-warning pl-4 pr-4" style="color:white">Edit</button>
+                    @if (Model.EducationId == Guid.Empty)
+                    {
+                        @Html.ActionLink("Add", "SaveEducation", "MyEducation", null, new { @class = "btn btn-primary pl-4 pr-4" })
+                    }
+
+                    else
+                    {
+                        @Html.ActionLink("Edit", "SaveEducation", "MyEducation", new {educationId = Model.EducationId }, new { @class = "btn btn-warning pl-4 pr-4" })
+                    }
                 </td>
 
-                <td style="color:white">
-                    <span class="badge bg-danger p-2">Incomplete</span>
-                    <span class="badge bg-success p-2">Complete</span>
+                <td style="color:white; ">
+                    @if (Model.EducationId == Guid.Empty)
+                    {
+                        <span class="badge bg-danger p-2">Incomplete</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success p-2">Complete</span>
+                    }
+
                 </td>
             </tr>
 
 
-            <tr>
-                <td class="text-left">Experience</td>
-                <td>
-                    <button type="button" class="btn btn-primary pl-4 pr-4">Add</button>
-                    <button type="button" class="btn btn-warning pl-4 pr-4" style="color:white">Edit</button>
-                </td>
-
-                <td style="color:white">
-                    <span class="badge bg-danger p-2">Incomplete</span>
-                    <span class="badge bg-success p-2">Complete</span>
-                </td>                  
-            </tr>
-
-
-            <tr>
-                <td class="text-left">Languages</td>
-                <td>
-                    <button type="button" class="btn btn-primary pl-4 pr-4">Add</button>
-                    <button type="button" class="btn btn-warning pl-4 pr-4" style="color:white">Edit</button>
-                </td>
-
-                <td style="color:white">
-                    <span class="badge bg-danger p-2">Incomplete</span>
-                    <span class="badge bg-success p-2">Complete</span>
-                </td>
-            </tr>*@
         </tbody>
 
     </table>
