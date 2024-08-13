@@ -53,19 +53,18 @@
             <tr>
                 <td class="text-left">Education</td>
                 <td>
-                    @if (Model.EducationId == Guid.Empty)
+                    @if (Model.EducationCount == 0)
                     {
-                        @Html.ActionLink("Add", "SaveEducation", "MyEducation", null, new { @class = "btn btn-primary pl-4 pr-4" })
+                        @Html.ActionLink("Add", "Index", "MyEducation", null, new { @class = "btn btn-primary pl-4 pr-4" })
                     }
-
                     else
                     {
-                        @Html.ActionLink("Edit", "SaveEducation", "MyEducation", new {educationId = Model.EducationId }, new { @class = "btn btn-warning pl-4 pr-4" })
+                        @Html.ActionLink("Edit", "Index", "MyEducation", null, new { @class = "btn btn-warning pl-4 pr-4" })
                     }
                 </td>
 
                 <td style="color:white; ">
-                    @if (Model.EducationId == Guid.Empty)
+                    @if (Model.EducationCount == 0)
                     {
                         <span class="badge bg-danger p-2">Incomplete</span>
                     }

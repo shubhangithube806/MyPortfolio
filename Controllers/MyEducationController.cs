@@ -12,6 +12,17 @@ namespace MyPortfolio.Controllers
     public class MyEducationController : Controller
     {
         ApplicationDbContext db = new ApplicationDbContext();
+
+        public ActionResult Index()
+        {
+            Guid portfolioUserId = Helpers.GetPortfolioUserId(User);
+
+            List<Education> educationList = db.Education.Where(m => m.PortfolioUserId == portfolioUserId)
+                                              .OrderBy(m => m.StartYear).ToList();
+            return View(educationList);
+        }
+
+
         // GET: MyEducation
         [HttpGet]
         public ActionResult SaveEducation(Guid? educationId)
@@ -46,11 +57,24 @@ namespace MyPortfolio.Controllers
                     db.SaveChanges();
                 }
 
-                return RedirectToAction("Index", "CreatePortfolio");
+                return RedirectToAction("Index", "MyEducation");
             }
 
             return View(education);
 
+        }
+
+        public ActionResult DeleteEducation(Guid educationId)
+        {
+            Education education = db.Education.Where(e => e.EducationId == educationId).FirstOrDefault();
+
+            if(education != null)
+            {
+                db.Education.Remove(education);
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("Index", "MyEducation");
         }
 
 
