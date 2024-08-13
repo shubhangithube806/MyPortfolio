@@ -212,6 +212,10 @@
     <Compile Include="Migrations\202407281251443_AddEducationTable..designer.cs">
       <DependentUpon>202407281251443_AddEducationTable..cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202408130641194_MakePercentageOrCGPAColumnNullableInEducationTable.cs" />
+    <Compile Include="Migrations\202408130641194_MakePercentageOrCGPAColumnNullableInEducationTable.designer.cs">
+      <DependentUpon>202408130641194_MakePercentageOrCGPAColumnNullableInEducationTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationDbInitializer.cs" />
@@ -368,6 +372,7 @@
     <Content Include="Views\CreatePortfolio\Index.cshtml" />
     <Content Include="Views\MyBasicInfo\SaveBasicInfo.cshtml" />
     <Content Include="Views\MyEducation\SaveEducation.cshtml" />
+    <Content Include="Views\MyEducation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -405,6 +410,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202407281251443_AddEducationTable..resx">
       <DependentUpon>202407281251443_AddEducationTable..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408130641194_MakePercentageOrCGPAColumnNullableInEducationTable.resx">
+      <DependentUpon>202408130641194_MakePercentageOrCGPAColumnNullableInEducationTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

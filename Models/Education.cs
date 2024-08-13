@@ -24,7 +24,7 @@ namespace MyPortfolio.Models
 
         [Range(0.1,100)]
         [Display(Name = "Percentage/CGPA")]
-        public double PercentageOrCGPA { get; set; }
+        public double? PercentageOrCGPA { get; set; }
 
         [Required]
         [Range(1900, 2100)]
