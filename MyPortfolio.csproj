@@ -216,12 +216,17 @@
     <Compile Include="Migrations\202408130641194_MakePercentageOrCGPAColumnNullableInEducationTable.designer.cs">
       <DependentUpon>202408130641194_MakePercentageOrCGPAColumnNullableInEducationTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202408131120465_AddExperienceTable.cs" />
+    <Compile Include="Migrations\202408131120465_AddExperienceTable.designer.cs">
+      <DependentUpon>202408131120465_AddExperienceTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationDbInitializer.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\BasicInfo.cs" />
     <Compile Include="Models\Education.cs" />
+    <Compile Include="Models\Experience.cs" />
     <Compile Include="Models\PortfolioUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -413,6 +418,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202408130641194_MakePercentageOrCGPAColumnNullableInEducationTable.resx">
       <DependentUpon>202408130641194_MakePercentageOrCGPAColumnNullableInEducationTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408131120465_AddExperienceTable.resx">
+      <DependentUpon>202408131120465_AddExperienceTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

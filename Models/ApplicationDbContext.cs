@@ -38,6 +38,8 @@ namespace MyPortfolio.Models
         public DbSet<BasicInfo> BasicInfo { get; set; }
 
         public DbSet<Education> Education { get; set; }
+
+        public DbSet<Experience> Experience { get; set; }
     }
 
 }
