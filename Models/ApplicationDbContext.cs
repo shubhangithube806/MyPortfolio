@@ -43,6 +43,8 @@ namespace MyPortfolio.Models
 
         public DbSet<Course> Course { get; set; }
 
+        public DbSet<Skill> Skill { get; set; }
+
 
     }
 
