@@ -53,7 +53,7 @@
             @Html.LabelFor(m => m.JoiningDate, new { @class = "col-md-3 col-form-label" })
 
             <div class="col-md-9">
-                @Html.TextBoxFor(m => m.JoiningDate, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+                @Html.TextBoxFor(m => m.JoiningDate, "{0:yyyy-MM-dd}", new { @class = "form-control", Type = "date" })
                 @Html.ValidationMessageFor(m => m.JoiningDate, "", new { @class = "text-danger" })
             </div>
         </div>

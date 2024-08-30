@@ -1,0 +1,71 @@
+﻿@model List<MyPortfolio.Models.Course>
+@{
+    ViewBag.Title = "Course List";
+}
+
+<div class="container mt-5">
+
+    <div class="text-center mb-4">
+        <h2 class="display-5 font-weight-bold text-danger border-bottom pb-3">Course List</h2>
+    </div>
+
+    @if (Model.Count() > 0)
+    {
+        <div class="row">
+            @foreach (var course in Model)
+            {
+                <div class="col-md-4 mb-4 d-flex align-course-stretch">
+                    <div class="card shadow-sm w-100">
+                        <div class="card-body d-flex flex-column">
+
+                            <h5 class="card-title">@course.CourseName</h5>
+                            <h6 class="card-subtitle mb-2">@course.CoursePlatform</h6>
+
+                            <p class="card-text">
+
+                                <strong>Start Date: </strong>@course.StartDate <br />
+
+                                @if (course.EndDate.HasValue)
+                                {
+                                    <strong>End Date: </strong>@course.EndDate <br />
+                                }
+
+                                <strong>Description: </strong>@course.Description <br />
+
+                                <strong>Skills: </strong>@course.Skills <br />
+
+                            </p>
+
+                            <div class="mt-auto d-flex justify-content-between">
+                                @Html.ActionLink("Edit", "SaveCourse", "MyCourse",
+                                                    new { courseId = course.CourseId },
+                                                    new { @class = "btn btn-success btn-sm" })
+
+
+                                @Html.ActionLink("Delete", "SaveCourse", "MyCourse",
+                                                    new { courseId = course.CourseId },
+                                                    new { @class = "btn btn-danger btn-sm" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info text-center">
+            No course records found. Add your course by clicking the "Add New Course" button.
+        </div>
+    }
+
+    <div class="text-center">
+        @Html.ActionLink("Add New Course", "SaveCourse", "MyCourse", null, new { @class = "btn btn-primary" })
+    </div>
+
+    <div class="text-center mt-3">
+        @Html.ActionLink("Back", "Index", "CreatePortfolio", null, new { @class = "btn btn-secondary" })
+    </div>
+
+</div>
+

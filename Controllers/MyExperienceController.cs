@@ -13,7 +13,6 @@ namespace MyPortfolio.Controllers
     {
         ApplicationDbContext db = new ApplicationDbContext();
 
-        
         public ActionResult Index()
         {
             Guid portfolioUserId = Helpers.GetPortfolioUserId(User);
@@ -45,7 +44,7 @@ namespace MyPortfolio.Controllers
             {
                 if (experience.ExperienceId == Guid.Empty)
                 {
-                    //Add Education
+                    //Add Experience
                     experience.ExperienceId = Guid.NewGuid();
                     experience.PortfolioUserId = Helpers.GetPortfolioUserId(User);
 
@@ -54,7 +53,7 @@ namespace MyPortfolio.Controllers
                 }
                 else
                 {
-                    //Edit Education
+                    //Edit Experience
                     db.Entry(experience).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                 }

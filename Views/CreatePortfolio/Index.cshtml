@@ -101,6 +101,31 @@
 
                 </td>
 
+            <tr>
+                <td class="text-left">Course</td>
+                <td>
+                    @if (Model.CourseCount == 0)
+                    {
+                        @Html.ActionLink("Add", "Index", "MyCourse", null, new { @class = "btn btn-primary pl-4 pr-4" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Edit", "Index", "MyCourse", null, new { @class = "btn btn-warning pl-4 pr-4" })
+                    }
+                </td>
+
+                <td style="color:white; ">
+                    @if (Model.CourseCount == 0)
+                    {
+                        <span class="badge bg-danger p-2">Incomplete</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success p-2">Complete</span>
+                    }
+
+                </td>
+
 
         </tbody>
 
