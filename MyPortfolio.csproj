@@ -231,6 +231,10 @@
     <Compile Include="Migrations\202408300934599_CreateSkillTable..designer.cs">
       <DependentUpon>202408300934599_CreateSkillTable..cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202409020743316_CreateLanguageTable..cs" />
+    <Compile Include="Migrations\202409020743316_CreateLanguageTable..designer.cs">
+      <DependentUpon>202409020743316_CreateLanguageTable..cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationDbInitializer.cs" />
@@ -239,6 +243,7 @@
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Education.cs" />
     <Compile Include="Models\Experience.cs" />
+    <Compile Include="Models\Language.cs" />
     <Compile Include="Models\PortfolioUser.cs" />
     <Compile Include="Models\Skill.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -446,6 +451,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202408300934599_CreateSkillTable..resx">
       <DependentUpon>202408300934599_CreateSkillTable..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409020743316_CreateLanguageTable..resx">
+      <DependentUpon>202409020743316_CreateLanguageTable..cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
