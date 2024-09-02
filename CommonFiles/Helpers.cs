@@ -6,13 +6,15 @@ using System.Linq;
 using System.Security.Principal;
 using System.Web;
 
+
+
 namespace MyPortfolio.CommonFiles
 {
     public class Helpers
     {
         public static Guid GetPortfolioUserId(IPrincipal user)
         {
-            using(ApplicationDbContext db = new ApplicationDbContext())
+            using (ApplicationDbContext db = new ApplicationDbContext())
             {
                 Guid userId = new Guid(user.Identity.GetUserId());
 
@@ -20,7 +22,7 @@ namespace MyPortfolio.CommonFiles
 
                 return portfolioUser.PortfolioUserId;
             }
-
         }
     }
 }
+
