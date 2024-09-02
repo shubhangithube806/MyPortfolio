@@ -170,7 +170,7 @@
                 </td>
 
                 <td style="color:white; ">
-                    @if (Model.SkillCount == 0)
+                    @if (Model.LanguageCount == 0)
                     {
                         <span class="badge bg-danger p-2">Incomplete</span>
                     }
@@ -181,6 +181,33 @@
 
                 </td>
             </tr>
+
+            <tr>
+                <td class="text-left">Strength</td>
+                <td>
+                    @if (Model.StrengthCount == 0)
+                    {
+                        @Html.ActionLink("Add", "Index", "MyStrength", null, new { @class = "btn btn-primary pl-4 pr-4" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Edit", "Index", "MyStrength", null, new { @class = "btn btn-warning pl-4 pr-4" })
+                    }
+                </td>
+
+                <td style="color:white; ">
+                    @if (Model.StrengthCount == 0)
+                    {
+                        <span class="badge bg-danger p-2">Incomplete</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success p-2">Complete</span>
+                    }
+
+                </td>
+            </tr>
+
         </tbody>
 
     </table>

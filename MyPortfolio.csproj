@@ -412,6 +412,7 @@
     <Content Include="Views\MyLanguage\Index.cshtml" />
     <Content Include="Views\MyLanguage\SaveLanguage.cshtml" />
     <Content Include="Views\MyStrength\Index.cshtml" />
+    <Content Include="Views\MyStrength\SaveStrength.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
