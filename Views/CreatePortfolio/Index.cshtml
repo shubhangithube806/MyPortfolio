@@ -154,6 +154,33 @@
 
                 </td>
             </tr>
+
+
+            <tr>
+                <td class="text-left">Language</td>
+                <td>
+                    @if (Model.LanguageCount == 0)
+                    {
+                        @Html.ActionLink("Add", "Index", "MyLanguage", null, new { @class = "btn btn-primary pl-4 pr-4" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Edit", "Index", "MyLanguage", null, new { @class = "btn btn-warning pl-4 pr-4" })
+                    }
+                </td>
+
+                <td style="color:white; ">
+                    @if (Model.SkillCount == 0)
+                    {
+                        <span class="badge bg-danger p-2">Incomplete</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success p-2">Complete</span>
+                    }
+
+                </td>
+            </tr>
         </tbody>
 
     </table>
