@@ -208,6 +208,33 @@
                 </td>
             </tr>
 
+            <tr>
+                <td class="text-left">Hobby</td>
+                <td>
+                    @if (Model.HobbyCount == 0)
+                    {
+                        @Html.ActionLink("Add", "Index", "MyHobby", null, new { @class = "btn btn-primary pl-4 pr-4" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Edit", "Index", "MyHobby", null, new { @class = "btn btn-warning pl-4 pr-4" })
+                    }
+                </td>
+
+                <td style="color:white; ">
+                    @if (Model.HobbyCount == 0)
+                    {
+                        <span class="badge bg-danger p-2">Incomplete</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success p-2">Complete</span>
+                    }
+
+                </td>
+               
+            </tr>
+
         </tbody>
 
     </table>
