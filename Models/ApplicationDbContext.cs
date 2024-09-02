@@ -49,6 +49,8 @@ namespace MyPortfolio.Models
 
         public DbSet<Strength> Strength { get; set; }
 
+        public DbSet<Hobby> Hobby { get; set; }
+
 
     }
 
