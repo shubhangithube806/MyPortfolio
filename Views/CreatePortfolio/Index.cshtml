@@ -232,7 +232,34 @@
                     }
 
                 </td>
-               
+
+            </tr>
+
+            <tr>
+                <td class="text-left">Link</td>
+                <td>
+                    @if (Model.LinkCount == 0)
+                    {
+                        @Html.ActionLink("Add", "Index", "MyLink", null, new { @class = "btn btn-primary pl-4 pr-4" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Edit", "Index", "MyLink", null, new { @class = "btn btn-warning pl-4 pr-4" })
+                    }
+                </td>
+
+                <td style="color:white; ">
+                    @if (Model.LinkCount == 0)
+                    {
+                        <span class="badge bg-danger p-2">Incomplete</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success p-2">Complete</span>
+                    }
+
+                </td>
+
             </tr>
 
         </tbody>

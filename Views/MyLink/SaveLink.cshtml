@@ -1,0 +1,60 @@
+﻿@model MyPortfolio.Models.Link
+@{
+    ViewBag.Title = "Save Link";
+}
+
+<div class="container mt-5">
+
+    <div class="text-center mb-4">
+        <h2 class="display-5 font-weight-bold text-danger border-bottom pb-3">Link</h2>
+    </div>
+
+    @using (Html.BeginForm("SaveLink", "MyLink", FormMethod.Post, new { @class = "Form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @Html.HiddenFor(m => m.LinkId)
+        @Html.HiddenFor(m => m.PortfolioUserId)
+
+        <div class="form-group row">
+            @Html.LabelFor(m => m.LinkText, new { @class = "col-md-3 col-form-label" })
+
+            <div class="col-md-9">
+                @Html.TextBoxFor(m => m.LinkText, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.LinkText, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(m => m.LinkType, new { @class = "col-md-3 col-form-label" })
+
+            <div class="col-md-9">
+                @Html.DropDownListFor(m => m.LinkType,
+                                       new List<SelectListItem> {
+                                            new SelectListItem { Text = "LinkedIn", Value = "LinkedIn" },
+                                            new SelectListItem { Text = "GitHub", Value = "GitHub" },
+                                            new SelectListItem { Text = "Project", Value = "Project" },
+                                            new SelectListItem { Text = "Other", Value = "Other" }
+                                       },
+                                       new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.LinkType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group-row">
+            <div class="col-md-9 offset-md-3">
+                <button type="submit" class="btn btn-success">Save</button>
+            </div>
+        </div>
+
+
+        <div class="form-group-row mt-2">
+            <div class="col-md-9 offset-md-3">
+                @Html.ActionLink("Back", "Index", "MyLink", null, new { @class = "btn btn-secondary" })
+            </div>
+        </div>
+    }
+
+
+</div>

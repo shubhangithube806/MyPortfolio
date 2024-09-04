@@ -185,6 +185,7 @@
     <Compile Include="Controllers\MyExperienceController.cs" />
     <Compile Include="Controllers\MyHobbyController.cs" />
     <Compile Include="Controllers\MyLanguageController.cs" />
+    <Compile Include="Controllers\MyLinkController.cs" />
     <Compile Include="Controllers\MySkillController.cs" />
     <Compile Include="Controllers\MyStrengthController.cs" />
     <Compile Include="Global.asax.cs">
@@ -246,6 +247,10 @@
     <Compile Include="Migrations\202409020959501_CreateHobbyTable..designer.cs">
       <DependentUpon>202409020959501_CreateHobbyTable..cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202409041033346_LinkTableAdded..cs" />
+    <Compile Include="Migrations\202409041033346_LinkTableAdded..designer.cs">
+      <DependentUpon>202409041033346_LinkTableAdded..cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationDbInitializer.cs" />
@@ -256,6 +261,7 @@
     <Compile Include="Models\Experience.cs" />
     <Compile Include="Models\Hobby.cs" />
     <Compile Include="Models\Language.cs" />
+    <Compile Include="Models\Link.cs" />
     <Compile Include="Models\PortfolioUser.cs" />
     <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\Strength.cs" />
@@ -421,6 +427,8 @@
     <Content Include="Views\MyStrength\SaveStrength.cshtml" />
     <Content Include="Views\MyHobby\Index.cshtml" />
     <Content Include="Views\MyHobby\SaveHobby.cshtml" />
+    <Content Include="Views\MyLink\Index.cshtml" />
+    <Content Include="Views\MyLink\SaveLink.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -479,6 +487,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202409020959501_CreateHobbyTable..resx">
       <DependentUpon>202409020959501_CreateHobbyTable..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409041033346_LinkTableAdded..resx">
+      <DependentUpon>202409041033346_LinkTableAdded..cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

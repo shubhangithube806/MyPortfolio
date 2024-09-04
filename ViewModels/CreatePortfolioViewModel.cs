@@ -16,6 +16,7 @@ namespace MyPortfolio.ViewModels
         public int LanguageCount { get; set; }
         public int StrengthCount { get; set; }
         public int HobbyCount { get; set; }
+        public int LinkCount { get; set; }
 
 
         public void Init(ApplicationDbContext db, Guid portfolioUserId)
@@ -36,6 +37,8 @@ namespace MyPortfolio.ViewModels
             this.StrengthCount = db.Strength.Where(m => m.PortfolioUserId == portfolioUserId).Count();
 
             this.HobbyCount = db.Hobby.Where(m => m.PortfolioUserId == portfolioUserId).Count();
+
+            this.LinkCount = db.Link.Where(m => m.PortfolioUserId == portfolioUserId).Count();
 
         }
     }
