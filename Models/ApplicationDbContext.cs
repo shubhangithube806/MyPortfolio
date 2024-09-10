@@ -53,6 +53,8 @@ namespace MyPortfolio.Models
 
         public DbSet<Link> Link { get; set; }
 
+        public DbSet<ProfileImage> ProfileImage { get; set; }
+
 
     }
 

@@ -18,6 +18,8 @@ namespace MyPortfolio.ViewModels
         public int HobbyCount { get; set; }
         public int LinkCount { get; set; }
 
+        public Guid ProfileImageId { get; set; }
+
 
         public void Init(ApplicationDbContext db, Guid portfolioUserId)
         {
@@ -39,6 +41,9 @@ namespace MyPortfolio.ViewModels
             this.HobbyCount = db.Hobby.Where(m => m.PortfolioUserId == portfolioUserId).Count();
 
             this.LinkCount = db.Link.Where(m => m.PortfolioUserId == portfolioUserId).Count();
+
+            this.ProfileImageId = db.ProfileImage.Where(m => m.PortfolioUserId == portfolioUserId).Select(m => m.ProfileImageId).FirstOrDefault();
+
 
         }
     }
