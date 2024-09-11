@@ -28,6 +28,8 @@ namespace MyPortfolio.ViewModels
 
         public List<Link> LinkList { get; set; }
 
+        public ProfileImage ProfileImage { get; set; }
+
         public void Init(ApplicationDbContext db, string userName)
         {
             this.PortfolioUser = db.PortfolioUser.Where(m => m.UserName == userName).FirstOrDefault();
@@ -43,6 +45,8 @@ namespace MyPortfolio.ViewModels
                 this.StrengthList = db.Strength.Where(m => m.PortfolioUserId == this.PortfolioUser.PortfolioUserId).OrderBy(m => m.Name).ToList();
                 this.HobbyList = db.Hobby.Where(m => m.PortfolioUserId == this.PortfolioUser.PortfolioUserId).OrderBy(m => m.Name).ToList();
                 this.LinkList = db.Link.Where(m => m.PortfolioUserId == this.PortfolioUser.PortfolioUserId).OrderBy(m => m.LinkType).ToList();
+                this.ProfileImage = db.ProfileImage.Where(m => m.PortfolioUserId == this.PortfolioUser.PortfolioUserId).FirstOrDefault();
+
             }
         }
     }

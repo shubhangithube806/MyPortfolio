@@ -20,7 +20,6 @@ namespace MyPortfolio.Models
 
         // Property to get the image in base64 format for display in the view 
         [NotMapped]  // This ensures the property will not affect your database schema 
-
         public string ImageBase64
         {
             get
@@ -31,7 +30,6 @@ namespace MyPortfolio.Models
                 }
                 return null;
             }
-
         }
     }
 }

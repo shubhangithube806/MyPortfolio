@@ -24,6 +24,19 @@
 
             <tr>
                 <td class="text-left">Basic Details</td>
+
+                <td style="color:white; ">
+                    @if (Model.BasicInfoId == Guid.Empty)
+                    {
+                        <span class="badge bg-danger p-2">Incomplete</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success p-2">Complete</span>
+                    }
+
+                </td>
+
                 <td>
                     @if (Model.BasicInfoId == Guid.Empty)
                     {
@@ -32,12 +45,17 @@
 
                     else
                     {
-                        @Html.ActionLink("Edit", "SaveBasicInfo", "MyBasicInfo", new { basicInfoId = Model.BasicInfoId }, new { @class = "btn btn-warning pl-4 pr-4" })
+                        @Html.ActionLink("Edit", "SaveBasicInfo", "MyBasicInfo", new { basicInfoId = Model.BasicInfoId }, new { @class = "btn btn-success pl-4 pr-4" })
                     }
                 </td>
+            </tr>
+
+
+            <tr>
+                <td class="text-left">Education</td>
 
                 <td style="color:white; ">
-                    @if (Model.BasicInfoId == Guid.Empty)
+                    @if (Model.EducationCount == 0)
                     {
                         <span class="badge bg-danger p-2">Incomplete</span>
                     }
@@ -47,11 +65,7 @@
                     }
 
                 </td>
-            </tr>
 
-
-            <tr>
-                <td class="text-left">Education</td>
                 <td>
                     @if (Model.EducationCount == 0)
                     {
@@ -59,12 +73,16 @@
                     }
                     else
                     {
-                        @Html.ActionLink("Edit", "Index", "MyEducation", null, new { @class = "btn btn-warning pl-4 pr-4" })
+                        @Html.ActionLink("Edit", "Index", "MyEducation", null, new { @class = "btn btn-success pl-4 pr-4" })
                     }
                 </td>
+            </tr>
+
+            <tr>
+                <td class="text-left">Experience</td>
 
                 <td style="color:white; ">
-                    @if (Model.EducationCount == 0)
+                    @if (Model.ExperienceCount == 0)
                     {
                         <span class="badge bg-danger p-2">Incomplete</span>
                     }
@@ -74,10 +92,7 @@
                     }
 
                 </td>
-            </tr>
 
-            <tr>
-                <td class="text-left">Experience</td>
                 <td>
                     @if (Model.ExperienceCount == 0)
                     {
@@ -85,12 +100,16 @@
                     }
                     else
                     {
-                        @Html.ActionLink("Edit", "Index", "MyExperience", null, new { @class = "btn btn-warning pl-4 pr-4" })
+                        @Html.ActionLink("Edit", "Index", "MyExperience", null, new { @class = "btn btn-success pl-4 pr-4" })
                     }
                 </td>
+            </tr>
+
+            <tr>
+                <td class="text-left">Course</td>
 
                 <td style="color:white; ">
-                    @if (Model.ExperienceCount == 0)
+                    @if (Model.CourseCount == 0)
                     {
                         <span class="badge bg-danger p-2">Incomplete</span>
                     }
@@ -100,10 +119,7 @@
                     }
 
                 </td>
-            </tr>
 
-            <tr>
-                <td class="text-left">Course</td>
                 <td>
                     @if (Model.CourseCount == 0)
                     {
@@ -111,12 +127,17 @@
                     }
                     else
                     {
-                        @Html.ActionLink("Edit", "Index", "MyCourse", null, new { @class = "btn btn-warning pl-4 pr-4" })
+                        @Html.ActionLink("Edit", "Index", "MyCourse", null, new { @class = "btn btn-success pl-4 pr-4" })
                     }
                 </td>
+            </tr>
+
+
+            <tr>
+                <td class="text-left">Skill</td>
 
                 <td style="color:white; ">
-                    @if (Model.CourseCount == 0)
+                    @if (Model.SkillCount == 0)
                     {
                         <span class="badge bg-danger p-2">Incomplete</span>
                     }
@@ -126,11 +147,7 @@
                     }
 
                 </td>
-            </tr>
 
-
-            <tr>
-                <td class="text-left">Skill</td>
                 <td>
                     @if (Model.SkillCount == 0)
                     {
@@ -138,12 +155,18 @@
                     }
                     else
                     {
-                        @Html.ActionLink("Edit", "Index", "MySkill", null, new { @class = "btn btn-warning pl-4 pr-4" })
+                        @Html.ActionLink("Edit", "Index", "MySkill", null, new { @class = "btn btn-success pl-4 pr-4" })
                     }
                 </td>
+            </tr>
+
+
+            <tr>
+                <td class="text-left">Language</td>
+
 
                 <td style="color:white; ">
-                    @if (Model.SkillCount == 0)
+                    @if (Model.LanguageCount == 0)
                     {
                         <span class="badge bg-danger p-2">Incomplete</span>
                     }
@@ -153,11 +176,7 @@
                     }
 
                 </td>
-            </tr>
 
-
-            <tr>
-                <td class="text-left">Language</td>
                 <td>
                     @if (Model.LanguageCount == 0)
                     {
@@ -165,12 +184,16 @@
                     }
                     else
                     {
-                        @Html.ActionLink("Edit", "Index", "MyLanguage", null, new { @class = "btn btn-warning pl-4 pr-4" })
+                        @Html.ActionLink("Edit", "Index", "MyLanguage", null, new { @class = "btn btn-success pl-4 pr-4" })
                     }
                 </td>
+            </tr>
+
+            <tr>
+                <td class="text-left">Strength</td>
 
                 <td style="color:white; ">
-                    @if (Model.LanguageCount == 0)
+                    @if (Model.StrengthCount == 0)
                     {
                         <span class="badge bg-danger p-2">Incomplete</span>
                     }
@@ -180,10 +203,7 @@
                     }
 
                 </td>
-            </tr>
 
-            <tr>
-                <td class="text-left">Strength</td>
                 <td>
                     @if (Model.StrengthCount == 0)
                     {
@@ -191,12 +211,16 @@
                     }
                     else
                     {
-                        @Html.ActionLink("Edit", "Index", "MyStrength", null, new { @class = "btn btn-warning pl-4 pr-4" })
+                        @Html.ActionLink("Edit", "Index", "MyStrength", null, new { @class = "btn btn-success pl-4 pr-4" })
                     }
                 </td>
+            </tr>
+
+            <tr>
+                <td class="text-left">Hobby</td>
 
                 <td style="color:white; ">
-                    @if (Model.StrengthCount == 0)
+                    @if (Model.HobbyCount == 0)
                     {
                         <span class="badge bg-danger p-2">Incomplete</span>
                     }
@@ -206,10 +230,7 @@
                     }
 
                 </td>
-            </tr>
 
-            <tr>
-                <td class="text-left">Hobby</td>
                 <td>
                     @if (Model.HobbyCount == 0)
                     {
@@ -217,12 +238,17 @@
                     }
                     else
                     {
-                        @Html.ActionLink("Edit", "Index", "MyHobby", null, new { @class = "btn btn-warning pl-4 pr-4" })
+                        @Html.ActionLink("Edit", "Index", "MyHobby", null, new { @class = "btn btn-success pl-4 pr-4" })
                     }
                 </td>
 
+            </tr>
+
+            <tr>
+                <td class="text-left">Link</td>
+
                 <td style="color:white; ">
-                    @if (Model.HobbyCount == 0)
+                    @if (Model.LinkCount == 0)
                     {
                         <span class="badge bg-danger p-2">Incomplete</span>
                     }
@@ -233,10 +259,6 @@
 
                 </td>
 
-            </tr>
-
-            <tr>
-                <td class="text-left">Link</td>
                 <td>
                     @if (Model.LinkCount == 0)
                     {
@@ -244,12 +266,16 @@
                     }
                     else
                     {
-                        @Html.ActionLink("Edit", "Index", "MyLink", null, new { @class = "btn btn-warning pl-4 pr-4" })
+                        @Html.ActionLink("Edit", "Index", "MyLink", null, new { @class = "btn btn-success pl-4 pr-4" })
                     }
                 </td>
+            </tr>
+
+            <tr>
+                <td class="text-left">Profile Image</td>
 
                 <td style="color:white; ">
-                    @if (Model.LinkCount == 0)
+                    @if (Model.ProfileImageId == Guid.Empty)
                     {
                         <span class="badge bg-danger p-2">Incomplete</span>
                     }
@@ -260,6 +286,17 @@
 
                 </td>
 
+                <td>
+                    @if (Model.ProfileImageId == Guid.Empty)
+                    {
+                        @Html.ActionLink("Add", "SaveProfileImage", "MyProfileImage", null, new { @class = "btn btn-primary pl-4 pr-4" })
+                    }
+
+                    else
+                    {
+                        @Html.ActionLink("Edit", "SaveProfileImage", "MyProfileImage", new { profileImageId = Model.ProfileImageId }, new { @class = "btn btn-success pl-4 pr-4" })
+                    }
+                </td>
             </tr>
 
         </tbody>
